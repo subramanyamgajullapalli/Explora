@@ -1,0 +1,539 @@
+        /* General Reset */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header Styling */
+        .header {
+            height: 100vh;
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.5), 
+                rgba(0, 0, 0, 0.5)
+            ), 
+            url('background.1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .header .container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo and Site Name */
+        .header img {
+            width: 70px;
+            opacity: 0.7;
+        }
+
+        .login-btn {
+           /* Enhanced Login Button Styling */
+    width: 120px; /* Slightly increased width */
+    padding: 10px 0;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+    position: relative;
+}
+
+/* Hover Effect */
+.login-btn:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slight background color change on hover */
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Deepened shadow on hover */
+    transform: translateY(-3px); /* Slightly lift the button */
+}
+
+/* Active/Pressed Effect */
+.login-btn:active {
+    transform: translateY(2px); /* Pressed down effect */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow for pressed state */
+}
+
+/* Additional Focus Styling for Accessibility */
+.login-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect for focus state */
+}
+
+        
+
+        .header .logo-name {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo-name img {
+            width: 100px;
+            opacity: 0.7;
+        }
+
+        .header .site-name {
+            font-family: 'Pacifico', cursive;
+            font-size: 2rem;
+            color: white;
+            margin-left: 10px;
+        }
+
+        /* Centered Text */
+        .header .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .header .centered-text h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 40px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 30px;
+            background: #fff;
+            margin: 20px auto 0;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar .form-control {
+            border: 0;
+            border-radius: 30px 0 0 30px;
+            margin: 2px;
+        }
+
+        .search-bar .input-group-append .btn {
+            border-radius: 0 30px 30px 0;
+            background: #007bff;
+            color: #fff;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .features h1 {
+            margin-bottom: 30px;
+        }
+
+        /* Featured Boxes Styling */
+        .featured-box {
+            position: relative;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px 1px rgba(37, 73, 214, 0.18);
+        }
+
+        /* Feature Image Styling */
+        .feature-img {
+            position: relative;
+            text-align: center;
+        }
+
+        .feature-img img {
+            width: 60%; /* Set image size to 60% */
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .price {
+            width: 50px;
+            height: 50px;
+            background: #ff5722;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 50%;
+            padding: 10px;
+            position: absolute;
+            left: 20px;
+            bottom: -25px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .rating {
+            padding: 3px;
+            background: #fff;
+            position: absolute;
+            bottom: -20px;
+            right: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            font-size: 12px; /* Adjust rating text size */
+        }
+
+        /* Feature Details Styling */
+        .feature-details {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .feature-details h4 {
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        /* Font Awesome Icon Styling */
+        .features .fa {
+            font-size: 15px;
+            color: #ff5722;
+        }
+
+        /* Adjust Container to Fit Three Columns */
+        @media (min-width: 768px) {
+            .features .row .col-md-4 {
+                flex: 0 0 33.3333%;
+                max-width: 33.3333%;
+            }
+        }
+/* Gallery Section */
+.gallery {
+    background: #efefef;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-box {
+    position: relative; /* Ensure position is relative for absolute children if needed */
+}
+
+.gallery-box img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Added transition for smooth scaling */
+}
+
+.gallery-box img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Specific styling for Singapore image */
+.singapore-img {
+    width: 80%; /* Adjust width specifically for the Singapore image */
+    max-width: 400px; /* Set a maximum width for larger displays */
+    transition: transform 0.3s ease; /* Ensure the transition is also applied */
+}
+/* Gallery Section */
+.gallery {
+    background: #efefef;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.gallery-box img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-box img:hover {
+    transform: scale(1.1);
+}
+
+/* Text Overlay Styling */
+.gallery-box h4 {
+    padding: 100px 0;
+    display: block;
+    color: #fff;
+    text-shadow: -2px 2px 2px #000;
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px; /* Position text at the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none; /* Prevent hover events on the text */
+    margin-top:20px;
+}
+
+/* Gallery Section */
+.gallery {
+    background: #efefef;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.gallery-box img {
+    width: 90%; /* Smaller width to fit four images in a row */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.gallery-box img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Text Overlay Styling */
+.gallery-box h4 {
+    padding: 100px 0;
+    display: block;
+    color: #fff;
+    text-shadow: -2px 2px 2px #000;
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    margin-top:20px;
+}
+
+/* Responsive Design for Four Images in a Row */
+@media (min-width: 768px) {
+    .gallery .row .col-md-3 {
+        flex: 0 0 25%; /* Each image takes up 25% width for four columns */
+        max-width: 25%;
+    }
+}
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Banner Styling */
+.banner {
+    height: 100vh;
+    background: url('background.2.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+.banner-btn {
+    padding: 15px 30px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.banner-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner h2 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .banner-btn {
+        padding: 12px 25px;
+    }
+}
+
+
+/* Enhanced Login Button Styling */
+.booking-btn {
+    width: 150px; /* Adjusted width */
+    padding: 12px 0;
+    border: none; /* Removed border */
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff7f50, #ff6347); /* Custom gradient background */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease; /* Smooth transition for hover and active states */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Shadow effect for depth */
+    position: relative;
+}
+
+/* Hover Effect */
+.booking-btn:hover {
+    background: linear-gradient(135deg, #ff6347, #ff4500); /* Darker gradient on hover */
+    transform: translateY(-5px); /* Lift the button slightly */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Active/Pressed Effect */
+.booking-btn:active {
+    transform: translateY(2px); /* Simulates button press */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Softer shadow when pressed */
+}
+
+/* Focus State for Accessibility */
+.booking-btn:focus {
+    outline: none;
+    box-shadow: 0 0 12px rgba(255, 99, 71, 0.6); /* Glow effect for focus */
+}
+.users-feedback {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px; /* Adjust as necessary */
+    margin: 0 auto; /* Center container */
+}
+
+.row {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Space reviews evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.col-md-4 {
+    flex: 1; /* Ensure each column takes equal space */
+    padding: 0 10px; /* Padding for spacing */
+}
+
+.user-review {
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+    padding-top: 70px; /* Add space at the top for the quote */
+    padding-bottom: 50px;
+    background-color: #fff;
+    border-radius: 10px; /* Add rounded corners */
+    margin: 20px auto; /* Center the review box */
+    max-width: 400px; /* Limit the width */
+}
+
+.user-review p {
+    padding: 10px 20px;
+    position: relative;
+}
+
+.users-feedback img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Make the image circular */
+    margin: -30px auto 0; /* Adjust the top margin for positioning */
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for the image */
+    position: relative;
+    top: -30px; /* Position the image above the box */
+}
+
+.user-review p::before {
+    content: '\201C'; /* Opening quote mark */
+    font-size: 60px;
+    color: #ff5722; /* Color matching the design */
+    position: absolute;
+    top: 0; /* Align at the top of the box */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center alignment */
+    font-family: sans-serif;
+    line-height: 0;
+}
+.footer {
+    padding: 60px 20px;
+    background-image: linear-gradient(#2d557d, #a549eb);
+    color: #fff;
+    text-align: left;
+}
+
+.footer-logo {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    filter: brightness(1) invert(0);
+}
+
+.footer-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-description {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.row > .col-md-3 {
+    margin-bottom: 20px;
+}
+.footer hr
+{
+    margin-top:10px;
+    background:#efefef ;
+}
